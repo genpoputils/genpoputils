@@ -1,32 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <!-- Brand Gradient: vibrant electric blue to indigo to violet -->
-    <linearGradient id="gpuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="brandGrad" x1="0%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#2563eb" />
       <stop offset="50%" stop-color="#4f46e5" />
       <stop offset="100%" stop-color="#7c3aed" />
     </linearGradient>
-    <filter id="gpuShadow" x="-10%" y="-10%" width="130%" height="130%">
-      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.28"/>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.32" />
     </filter>
   </defs>
 
-  <!-- Squircle container matching 16px corner radius -->
-  <rect width="64" height="64" rx="16" fill="url(#gpuGrad)" />
-  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" />
+  <!-- Squircle container matching navbar icon -->
+  <rect width="512" height="512" rx="144" fill="url(#brandGrad)" />
+  <rect x="8" y="8" width="496" height="496" rx="136" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="12" />
 
-  <!-- The Modular Utility Matrix + Focal Period '.' of GenPopUtils. -->
-  <g filter="url(#gpuShadow)">
-    <!-- Top-Left tile: Arithmetic / Calculation -->
-    <rect x="15" y="15" width="14" height="14" rx="4.5" fill="#ffffff" />
-    
-    <!-- Top-Right tile: Logic / Developer tools -->
-    <rect x="35" y="15" width="14" height="14" rx="4.5" fill="#ffffff" fill-opacity="0.95" />
-    
-    <!-- Bottom-Left tile: Conversion & Scenarios -->
-    <rect x="15" y="35" width="14" height="14" rx="4.5" fill="#ffffff" fill-opacity="0.95" />
-    
+  <!-- The Modular Utility Matrix: 4 precision nodes + signature dot -->
+  <g filter="url(#shadow)" transform="translate(48, 48) scale(13)">
+    <!-- Top-Left: Calculation block -->
+    <rect x="6" y="6" width="8" height="8" rx="2.5" fill="#ffffff" />
+    <!-- Top-Right: Logic / developer block -->
+    <rect x="18" y="6" width="8" height="8" rx="2.5" fill="#ffffff" fill-opacity="0.95" />
+    <!-- Bottom-Left: Growth / metric block -->
+    <rect x="6" y="18" width="8" height="8" rx="2.5" fill="#ffffff" fill-opacity="0.95" />
     <!-- Bottom-Right: The Signature Focal Period '.' of GenPopUtils. -->
-    <circle cx="42" cy="42" r="7.5" fill="#ffffff" />
+    <circle cx="22" cy="22" r="4.2" fill="#ffffff" />
+    <!-- Subtle central connector crosshair -->
+    <path d="M14 10h4M10 14v4M18 14v4M14 22h4" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.45" />
   </g>
 </svg>
