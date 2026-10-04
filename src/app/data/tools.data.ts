@@ -29,7 +29,7 @@ export const TOOLS_DATA: UtilityTool[] = [
       'sip calculator',
       'investment calculator'
     ],
-    url: 'https://compoundcalc.genpoputils.com',
+    url: 'https://compoundcalc.genpoputils.com/compound-calculator',
     status: 'live',
     icon: 'chart-line',
     featured: true,

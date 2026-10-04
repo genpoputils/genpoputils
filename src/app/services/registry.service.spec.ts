@@ -19,7 +19,7 @@ describe('RegistryService', () => {
 
     const compound = live.find(t => t.id === 'compound-calc');
     expect(compound).toBeDefined();
-    expect(compound?.url).toBe('https://compoundcalc.genpoputils.com');
+    expect(compound?.url).toBe('https://compoundcalc.genpoputils.com/compound-calculator');
     expect(compound?.status).toBe('live');
 
     const regex = live.find(t => t.id === 'regex-tester');
